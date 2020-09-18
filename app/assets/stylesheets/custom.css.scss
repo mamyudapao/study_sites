@@ -2,10 +2,17 @@
 
 $gray-medium-light: #eaeaea;
 
+/* indexページ */
 .top-nav {
     background-color: rgb(249, 220, 74);
 }
 
+/* showページ */
+.showpage-profile {
+    text-align: center;
+}
+
+/* デバッグパーシャル */
 @mixin box_sizing {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -21,3 +28,4 @@ $gray-medium-light: #eaeaea;
     margin-top: 45px;
     @include box_sizing;
 }
+

@@ -1,13 +1,13 @@
     <div class="top-nav">
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" href="#">ホーム</a>
+                <%= link_to "ホーム", root_path, class: "nav-link active" %>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">アカウント</a>
+                <%= link_to "アカウント", user_path, class: "nav-link active" %>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">ヘルプ</a>
+                <%= link_to "ヘルプ",'#' , class: "nav-link active"%>
             </li>
         </ul>
     </div>
