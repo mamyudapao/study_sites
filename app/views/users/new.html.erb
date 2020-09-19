@@ -1,0 +1,22 @@
+<h1>Sign up</h1>
+
+<%= form_with model: @user do |f| %>
+<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name , class: "form-control", placeholder: "Enter name" %>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email , class: "form-control", placeholder: "Enter email" %>
+</div>
+<div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password , class: "form-control", placeholder: "Enter password" %>
+</div>
+<div class="form-group">
+    <%= f.label :email %>
+    <%= f.password_field :password_confirmation , class: "form-control", placeholder: "Enter passsword again" %>
+</div>
+<%= f.submit "Create my account", class: "btn btn-primary" %>
+<% end %>
