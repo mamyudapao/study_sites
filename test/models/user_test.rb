@@ -67,4 +67,8 @@ class UserTest < ActiveSupport::TestCase
   test "password must not exceed the maximum length" do
     @user.password = @user.password_confirmation = "a"*129
   end
+
+  test "autheticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 end
