@@ -7,7 +7,7 @@ class User < ApplicationRecord
       format: { with: VALID_EMAIL_REGEX }, #許可される形式はVALID_EMAIL_REGEX
       uniqueness: { case_sensitive: false } #大文字と小文字を区別しない
   has_secure_password #authenticateメソッドを使えるようにする
-  validates :password, presence: true, length: {minimum: 6, maximum: 128} # passwordは必須で最短6、最長128
+  validates :password, presence: true, length: {minimum: 6, maximum: 128}, allow_nil: true # passwordは必須で最短6、最長128
 
   def User.digest(string) #パスワードをハッシュ化するためのメソット
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
