@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-  resources :posts #投稿用のコントローラーのURL
+  resources :posts ,:only =>[:new, :create]
   resources :users #ユーザー用コントローラーのURL
 end
