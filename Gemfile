@@ -12,8 +12,10 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'rails-controller-testing'
+gem 'jquery-rails'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave'
+gem 'rmagick'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

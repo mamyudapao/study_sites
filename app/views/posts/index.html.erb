@@ -13,6 +13,10 @@
       <%= f.label :description %>
       <%= f.text_area :description, class: "form-control", placeholder: "感想を入力してください" %>
     </div>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :img, class: "image" %>
+    </div>
     <%= f.submit "投稿する", class: "btn btn-primary" %>
   </div>
 <% end %>
@@ -25,6 +29,7 @@
         <p class="card-text"><%= post.description %></p>
         <a href="#" class="card-link"><%= post.rating %></a>
         <a href="#" class="card-link">詳細</a>
+        <%= image_tag post.img.url if post.img? %>
       </div>
 
     </div>
